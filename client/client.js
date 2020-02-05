@@ -15,13 +15,12 @@ socket.onopen = e => {
 
 socket.onmessage = e => {
   let msgObj = JSON.parse(e.data);
-
   chatContents.innerHTML += `${msgObj.name}: ${msgObj.data} <br>`;
 };
 
 function sendMessage() {
   const text = document.getElementsByClassName("input__content")[0].value;
-  chatContents.innerHTML += `You: ${text} <br>`;
+
   socket.send(
     JSON.stringify({
       type: "message",

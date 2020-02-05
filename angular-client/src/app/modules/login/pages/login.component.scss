@@ -1,0 +1,16 @@
+.login-form {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 13px;
+}
+
+.input_lbl {
+  font-size: 20px;
+}
+
+.login-form__input-line {
+  display: block;
+}

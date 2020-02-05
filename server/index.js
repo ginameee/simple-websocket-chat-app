@@ -5,24 +5,22 @@ s.on("connection", ws => {
   ws.on("message", msg => {
     msg = JSON.parse(msg);
 
+    console.log(msg);
+
     if (msg.type === "name") {
       ws.personNm = msg.data;
-    }
+    } else {
+      let name = ws.personNm;
 
-    console.log(`Received: ${msg}`);
-
-    s.clients.forEach(client => {
-      if (client !== ws) {
+      s.clients.forEach(client => {
         client.send(
           JSON.stringify({
-            name: client.personNm,
+            name: ws !== client ? name : "You",
             data: msg.data
           })
         );
-      }
-    });
-
-    // ws.send(`From the server: ${msg}`);
+      });
+    }
   });
 
   ws.on("close", () => {
