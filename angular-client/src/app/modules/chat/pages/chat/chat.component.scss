@@ -1,8 +1,19 @@
 .chat {
-  width: 50vw;
-  height: 50vh;
+  width: 80vw;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #a0c0d7;
+}
+
+app-content {
+  height: 90%;
+  width: 100%;
+}
+
+app-type-n-send {
+  height: 10%;
+  width: 100%;
 }

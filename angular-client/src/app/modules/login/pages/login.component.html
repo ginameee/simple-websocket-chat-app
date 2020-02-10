@@ -1,23 +1,21 @@
 <div class="login-form">
-  <form [formGroup]="userInfo" (ngSubmit)="onLogin(userInfo.value)">
-    <span class="login-form__input-line input">
-      <input
-        type="text"
-        class="input__id"
-        placeholder="id"
-        formControlName="id"
-      />
-    </span>
-    <span class="login-form__input-line input">
-      <input
-        type="password"
-        class="input__pw"
-        placeholder="pw"
-        formControlName="pw"
-      />
-    </span>
-    <span>
-      <button class="form__input" type="submit">로그인</button>
-    </span>
+  <form
+    class="login-form__box"
+    [formGroup]="userInfo"
+    (ngSubmit)="onLogin(userInfo.value)"
+  >
+    <input
+      type="text"
+      class="input__line input__id"
+      placeholder="id"
+      formControlName="id"
+    />
+    <input
+      type="password"
+      class="input__line input__pw"
+      placeholder="pw"
+      formControlName="pw"
+    />
+    <button class="input__btn" type="submit">로그인</button>
   </form>
 </div>

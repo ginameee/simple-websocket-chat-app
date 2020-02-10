@@ -14,7 +14,6 @@ export class TypeNSendComponent implements OnInit {
   ngOnInit() {}
 
   send() {
-    console.log(this.msg);
     this.chatService.send(this.msg).subscribe(() => {
       this.msg = "";
     });

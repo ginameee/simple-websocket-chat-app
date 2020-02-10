@@ -7,12 +7,28 @@
   border-radius: 13px;
 }
 
+.login-form__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .input_lbl {
   font-size: 20px;
 }
 
-.login-form__input-line {
-  display: block;
-  width: 245px;
-  height: 45px;
+.input__line {
+  width: 240px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px #eaf2f9 solid;
+}
+
+.input__btn {
+  background-color: #715c5d;
+  color: white;
+  width: 240px;
+  height: 40px;
+  margin-top: 5px;
 }
