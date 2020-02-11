@@ -1,7 +1,15 @@
 <div class="content">
   <ul class="content__msg-list msg-list">
     <li class="msg-list__msg" *ngFor="let msg of msgs">
-      {{ msg.user }} {{ msg.content }}
+      <app-my-msgbox
+        *ngIf="msg.user === 'You'"
+        [msg]="msg.content"
+      ></app-my-msgbox>
+      <app-msgbox
+        *ngIf="msg.user !== 'You'"
+        [userName]="msg.user"
+        [msg]="msg.content"
+      ></app-msgbox>
     </li>
   </ul>
 </div>

@@ -1,34 +1,34 @@
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-form {
+  @include flex-center();
+  flex-direction: column;
   padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   border-radius: 13px;
+
+  &__box {
+    @include flex-center();
+    flex-direction: column;
+  }
 }
 
-.login-form__box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+.input {
+  &__line {
+    width: 240px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px #eaf2f9 solid;
+  }
 
-.input_lbl {
-  font-size: 20px;
-}
-
-.input__line {
-  width: 240px;
-  height: 40px;
-  box-sizing: border-box;
-  border: 1px #eaf2f9 solid;
-}
-
-.input__btn {
-  background-color: #715c5d;
-  color: white;
-  width: 240px;
-  height: 40px;
-  margin-top: 5px;
+  &__btn {
+    background-color: #715c5d;
+    color: white;
+    width: 240px;
+    height: 40px;
+    margin-top: 5px;
+  }
 }

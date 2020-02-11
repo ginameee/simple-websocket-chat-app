@@ -5,9 +5,11 @@ import { TypeNSendComponent } from "./components/type-n-send/type-n-send.compone
 import { ChatPage } from "./pages/chat/chat.component";
 import { UserInfoService } from "src/app/share/services/user-info/user-info.service";
 import { FormsModule } from "@angular/forms";
+import { MsgboxComponent } from './components/msgbox/msgbox.component';
+import { MyMsgboxComponent } from './components/my-msgbox/my-msgbox.component';
 
 @NgModule({
-  declarations: [ContentComponent, TypeNSendComponent, ChatPage],
+  declarations: [ContentComponent, TypeNSendComponent, ChatPage, MsgboxComponent, MyMsgboxComponent],
   imports: [CommonModule, FormsModule],
   exports: [ChatPage],
   providers: []
