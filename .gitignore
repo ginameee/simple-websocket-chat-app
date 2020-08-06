@@ -1,3 +1,2 @@
-server/node_modules/*
-angular-client/node_modules/*
-socketio-server/node_modules/*
+servers/*/node_modules
+clients/*/node_modules
